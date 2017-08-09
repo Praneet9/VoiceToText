@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_speech"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/layoutcolor"
+    tools:context="com.ngo.voicetotext.Speech">
+
+    <TextView
+        android:text="Enter Counselling Time Duration"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timedurationTextView"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ems="50"
+        android:hint="Time Duration in Minutes"
+        android:textColorHint="#CFD8DC"
+        android:textStyle="italic"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/timedurationEditText"
+        android:layout_below="@+id/timedurationTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:cursorVisible="true"
+        android:allowUndo="true" />
+
+    <TextView
+        android:text="Tap To Start Speaking!"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/speakTextView"
+        android:layout_above="@+id/nextButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_above="@+id/speakTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/speakButton"
+        android:padding="0dp"
+        android:onClick="speakButtonClicked" />
+
+    <Button
+        android:text="-->"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextButton"
+        android:backgroundTint="#C5CAE9"
+        android:background="@drawable/buttonrectangle"
+        android:onClick="nextButtonClicked"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switchHindi"
+        android:layout_alignBaseline="@+id/switchEnglish"
+        android:layout_alignBottom="@+id/switchEnglish"
+        android:layout_alignRight="@+id/languagePreference"
+        android:layout_alignEnd="@+id/languagePreference"
+        android:checked="false" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/switchEnglish"
+        android:layout_above="@+id/speakButton"
+        android:layout_alignLeft="@+id/languagePreference"
+        android:layout_alignStart="@+id/languagePreference"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <TextView
+        android:text="English"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_above="@+id/switchEnglish"
+        android:layout_alignLeft="@+id/languagePreference"
+        android:layout_alignStart="@+id/languagePreference"
+        android:layout_marginBottom="17dp"
+        android:id="@+id/englishTextview"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Hindi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/englishTextview"
+        android:layout_alignLeft="@+id/switchHindi"
+        android:layout_alignStart="@+id/switchHindi"
+        android:id="@+id/hindiTextview"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Select Language Preference"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/languagePreference"
+        android:layout_above="@+id/englishTextview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+
+
+</RelativeLayout>
